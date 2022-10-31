@@ -1,0 +1,218 @@
+@mixin iconCreate($color, $speed) {
+  position: absolute;
+  animation-name: reversRotation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: $speed;
+  background: $color;
+  transition: background-color 0.4s ease-in;
+  transition: box-shadow 0.4s ease-in;
+  svg {
+    transition: fill 0.4s ease-in;
+  }
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0 0 30px 10px #fff, 0 0 50px 25px $color;
+    svg {
+      fill: $color;
+    }
+    cursor: pointer;
+  }
+}
+
+.solar-system {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  z-index: 2;
+}
+
+.sun {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 20%;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    fill: black;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  position: absolute;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  animation-name: rotateorbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  &-1 {
+    width: 60%;
+    height: 60%;
+    animation-duration: 20s;
+  }
+  &-2 {
+    width: 40%;
+    height: 40%;
+    animation-duration: 15s;
+  }
+  &-3 {
+    width: 90%;
+    height: 90%;
+    animation-duration: 25s;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  z-index: 4;
+  svg {
+    width: 1.4rem;
+    fill: white;
+  }
+}
+
+//3 ring
+
+.redux {
+  @include iconCreate(#3178c6, 25s);
+  left: 45px;
+  top: 45px;
+}
+
+.nest {
+  @include iconCreate(#e0234e, 25s);
+
+  left: 45px;
+  bottom: 45px;
+}
+
+.mongodb {
+  @include iconCreate(#47a248, 25s);
+
+  right: 45px;
+  top: 45px;
+}
+
+.figma {
+  @include iconCreate(#f24e1e, 25s);
+  right: 45px;
+  bottom: 45px;
+}
+
+.firebase {
+  @include iconCreate(#ffca28, 25s);
+  bottom: -20px;
+}
+
+.git {
+  @include iconCreate(#f05032, 25s);
+  top: -20px;
+}
+
+.github {
+  @include iconCreate(#181717, 25s);
+  left: -20px;
+}
+
+.vscode {
+  @include iconCreate(#007acc, 25s);
+  right: -20px;
+}
+
+.typescript {
+  @include iconCreate(#3178c6, 20s);
+  left: -20px;
+}
+
+.react {
+  @include iconCreate(#61dafb, 20s);
+  top: -20px;
+}
+
+.node {
+  @include iconCreate(#339933, 20s);
+  right: -20px;
+}
+
+.vue {
+  @include iconCreate(#4fc08d, 20s);
+  bottom: -20px;
+}
+
+//2 Ring
+
+.html {
+  @include iconCreate(#e34f26, 15s);
+  left: 10px;
+  top: 10px;
+}
+.css {
+  @include iconCreate(#1572b6, 15s);
+  right: 10px;
+  bottom: 10px;
+}
+
+.sass {
+  @include iconCreate(#cc6699, 15s);
+  right: 10px;
+  top: 10px;
+}
+
+.javacript {
+  @include iconCreate(#f7df1e, 15s);
+  bottom: 10px;
+  left: 10px;
+}
+
+@keyframes rotateorbit {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes reversRotation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
