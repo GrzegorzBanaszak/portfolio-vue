@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import "breakpoints.scss";
 @import "solar.scss";
 @import "home.scss";
+@import "navbar.scss";
 
 * {
   margin: 0;

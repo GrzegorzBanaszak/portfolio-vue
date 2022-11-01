@@ -1,14 +1,18 @@
-.open {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 100vh;
+.container {
+  height: 100vh;
   width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
 
-  &-about {
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  &-content {
     background-color: white;
     z-index: 2;
     padding: 2rem;
@@ -23,9 +27,6 @@
       font-size: 1.3rem;
     }
   }
-}
-
-.about {
   &-header {
     text-align: center;
     text-transform: uppercase;

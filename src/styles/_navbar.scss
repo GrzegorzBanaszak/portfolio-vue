@@ -1,0 +1,114 @@
+.navbar {
+  font-family: "Permanent Marker", cursive;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  &-toggle {
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  &-icon {
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  &-description {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 2rem 1.1rem 3rem;
+    border-radius: 0 25px 25px 0;
+    position: relative;
+    right: 2rem;
+    color: black;
+    font-size: 1.2rem;
+  }
+}
+
+.links {
+  &-enter {
+    &-from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    &-to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    &-active {
+      transition: all 0.3s ease-in;
+    }
+  }
+}
+
+.link-description {
+  &-enter {
+    &-from {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+    &-to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    &-active {
+      transition: all 0.3s ease-in;
+    }
+  }
+  &-leave {
+    &-from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    &-to {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+    &-active {
+      transition: all 0.3s ease-in;
+    }
+  }
+}
+
+@include lg {
+  .navbar {
+    flex-direction: row;
+    position: static;
+    &-toggle {
+      display: none;
+    }
+    &-description {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 2rem 0 3rem;
+      border-radius: 0 25px 25px 0;
+      position: relative;
+      right: 2rem;
+      color: black;
+      font-size: 1.2rem;
+    }
+  }
+}
