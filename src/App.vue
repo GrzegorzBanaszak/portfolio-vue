@@ -17,6 +17,6 @@ export default defineComponent({
 <template>
   <main class="container" :style="{ backgroundImage: bg }">
     <navbar />
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
   </main>
 </template>

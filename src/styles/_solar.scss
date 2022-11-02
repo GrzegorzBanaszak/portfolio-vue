@@ -4,28 +4,27 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: $speed;
-  background: $color;
-  transition: background-color 0.4s ease-in;
-  transition: box-shadow 0.4s ease-in;
-  svg {
-    transition: fill 0.4s ease-in;
-  }
+  background: white;
+  transition: background-color 0.2s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  fill: black;
 
+  svg {
+    transition: fill 0.2s ease-in;
+  }
   &:hover {
-    background-color: white;
-    box-shadow: 0 0 30px 10px #fff, 0 0 50px 25px $color;
-    svg {
-      fill: $color;
-    }
+    background: $color;
+    fill: white;
     cursor: pointer;
   }
 }
 
 .solar-system {
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .sun {
@@ -94,13 +93,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   z-index: 4;
   svg {
-    width: 1.4rem;
-    fill: white;
+    width: 1rem;
   }
 }
 
@@ -108,33 +106,33 @@
 
 .redux {
   @include iconCreate(#3178c6, 25s);
-  left: 45px;
-  top: 45px;
+  left: 25px;
+  top: 25px;
 }
 
 .nest {
   @include iconCreate(#e0234e, 25s);
 
-  left: 45px;
-  bottom: 45px;
+  left: 25px;
+  bottom: 25px;
 }
 
 .mongodb {
   @include iconCreate(#47a248, 25s);
 
-  right: 45px;
-  top: 45px;
+  right: 25px;
+  top: 25px;
 }
 
 .figma {
   @include iconCreate(#f24e1e, 25s);
-  right: 45px;
-  bottom: 45px;
+  right: 25px;
+  bottom: 25px;
 }
 
 .firebase {
   @include iconCreate(#ffca28, 25s);
-  bottom: -20px;
+  bottom: -15px;
 }
 
 .git {
@@ -144,22 +142,22 @@
 
 .github {
   @include iconCreate(#181717, 25s);
-  left: -20px;
+  left: -15px;
 }
 
 .vscode {
   @include iconCreate(#007acc, 25s);
-  right: -20px;
+  right: -15px;
 }
 
 .typescript {
   @include iconCreate(#3178c6, 20s);
-  left: -20px;
+  left: -15px;
 }
 
 .react {
   @include iconCreate(#61dafb, 20s);
-  top: -20px;
+  top: -15px;
 }
 
 .node {
@@ -176,25 +174,25 @@
 
 .html {
   @include iconCreate(#e34f26, 15s);
-  left: 10px;
-  top: 10px;
+  left: 5px;
+  top: 5px;
 }
 .css {
   @include iconCreate(#1572b6, 15s);
-  right: 10px;
-  bottom: 10px;
+  right: 5px;
+  bottom: 5px;
 }
 
 .sass {
   @include iconCreate(#cc6699, 15s);
-  right: 10px;
-  top: 10px;
+  right: 5px;
+  top: 5px;
 }
 
 .javacript {
   @include iconCreate(#f7df1e, 15s);
-  bottom: 10px;
-  left: 10px;
+  bottom: 5px;
+  left: 5px;
 }
 
 @keyframes rotateorbit {
